@@ -5,6 +5,10 @@ dist/
 build/
 *.tsbuildinfo
 
+# The Dockerfile copies the built console here at image build time (ADR-006).
+# It is generated, never committed.
+server/public/
+
 # Local environment. Nothing here belongs in the repo; the class credential
 # lives in a GitHub Actions secret (ADR-010), never in a file.
 .env
